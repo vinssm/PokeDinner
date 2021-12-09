@@ -8,7 +8,7 @@ A web application that allows user to input the name of a Pokémon, and returns 
 - Spectre CSS
 - jQuery
 - [PokéApi](https://pokeapi.co/)
-- [EDAMAM Recipe Search API](https://developer.edamam.com/edamam-docs-recipe-api)
+- [Spoontacular Recipe Search API](https://spoonacular.com/food-api)
 ## Website
 [URL coming soon](...)
 ![Img coming soon](...) 
