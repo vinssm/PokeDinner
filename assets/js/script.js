@@ -1,4 +1,9 @@
+// global variables
+var pokemonName = "pikachu";
+var minCal = "300";
+var maxCal = "350";
 
+// retrieve pokemon info based on user input
 var getPokeInfo = function (pokemonName) {
     var apiUrl = "https://pokeapi.co/api/v2/pokemon/" + pokemonName;
 
@@ -13,6 +18,8 @@ var getPokeInfo = function (pokemonName) {
             }
         });
 };
+
+// retrieve and convert pokemon info into standard units
 var pokemonInfo = function (data) {
     console.log(data);
     var weight = data.weight;
@@ -20,7 +27,9 @@ var pokemonInfo = function (data) {
     console.log(data.species.name + " is " + Math.floor(weight / 4.536) + "lbs");
     console.log(data.species.name + " is " + Math.round(10 * (height / 3.048)) / 10 + "feet");
 };
+//NEED TO CONVERT WEIGHT INTO CALORIE RANGE AND PASS UNTO FUNCTION BELOW
 
+// get recipe based on calorie range
 var getRecipe = function (minCal, maxCal) {
     var apiUrl = "https://api.spoonacular.com/recipes/findByNutrients?apiKey=40e808b51d7a4c93a511c37332820d56&minCalories=" + minCal + "&maxCalories=" + maxCal + "&number=2&random=true";
 
@@ -36,6 +45,7 @@ var getRecipe = function (minCal, maxCal) {
         });
 };
 
+// retrieve recipe info and pass unto displayRecipes(), retrieve recipe ID and pass unto retrieveUrl()
 var recipeInfo = function (recipes) {
     for (var i = 0; i < recipes.length; i++) {
         var recipeName = recipes[i].title;
@@ -46,6 +56,8 @@ var recipeInfo = function (recipes) {
         retrieveRecipeUrl(recipeID);
     }
 };
+
+// retrieve recipe url based on recipe ID
 var retrieveRecipeUrl = function(recipeID) {
     var apiUrl = "https://api.spoonacular.com/recipes/" + recipeID + "/information?apiKey=40e808b51d7a4c93a511c37332820d56";
 
@@ -61,17 +73,17 @@ var retrieveRecipeUrl = function(recipeID) {
         });
 };
 
+// add recipe urls as href to recipe cards
 var linkToRecipe = function(data) {
     var recipeUrl = data.spoonacularSourceUrl;
     console.log(recipeUrl);
 };
+
+// display recipes in a cards
 var displayRecipes = function(recipeName, recipeCal, recipeImgSrc){
     console.log(recipeName, recipeCal, recipeImgSrc);
 };
 
-var pokemonName = "pikachu";
-var minCal = "300";
-var maxCal = "350";
 getPokeInfo(pokemonName);
 getRecipe(minCal, maxCal);
 
