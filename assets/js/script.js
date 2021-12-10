@@ -1,7 +1,5 @@
 // global variables
-var pokemonName = "pikachu";
-var minCal = "300";
-var maxCal = "350";
+var pokemonName = "gastly";
 
 // retrieve pokemon info based on user input
 var getPokeInfo = function (pokemonName) {
@@ -19,15 +17,31 @@ var getPokeInfo = function (pokemonName) {
         });
 };
 
-// retrieve and convert pokemon info into standard units
+// retrieve and convert pokemon info into standard units, pass it unto getCalorieRange() and displayPokemonCard()
 var pokemonInfo = function (data) {
     console.log(data);
-    var weight = data.weight;
-    var height = data.height;
-    console.log(data.species.name + " is " + Math.floor(weight / 4.536) + "lbs");
-    console.log(data.species.name + " is " + Math.round(10 * (height / 3.048)) / 10 + "feet");
+    var name = data.name;
+    var type = data.types[0].type.name;
+    var weight = Math.ceil(data.weight / 4.536);
+    var height = Math.round(10 * (data.height / 3.048)) / 10;
+    var imgSrc = data.sprites.front_default;
+
+    getCalorieRange(weight);
+    displayPokemonCard(name, type, weight, height, imgSrc);
 };
-//NEED TO CONVERT WEIGHT INTO CALORIE RANGE AND PASS UNTO FUNCTION BELOW
+
+// get calorie range based on pokemon weight, using customized WHO formula from https://www.thejakartapost.com/life/2016/09/27/how-to-calculate-your-ideal-calorie-intake.html
+var getCalorieRange = function (weight) {
+    var minCal = Math.ceil((weight*2.2*15.3+679)/3)-50;
+    var maxCal = Math.ceil((weight*2.2*15.3+679)/3)+50;
+    console.log(minCal, maxCal);
+    getRecipe(minCal, maxCal);
+};
+
+// display pokemon card based on retrieved pokemon info
+var displayPokemonCard = function (name, type, weight, height, imgSrc) {
+    console.log(name + '\n' + type + '\n' + weight + "lbs" + '\n' + height + "feet" + '\n' + imgSrc);
+};
 
 // get recipe based on calorie range
 var getRecipe = function (minCal, maxCal) {
@@ -52,7 +66,7 @@ var recipeInfo = function (recipes) {
         var recipeCal = recipes[i].calories;
         var recipeImgSrc = recipes[i].image;
         var recipeID = recipes[i].id;
-        displayRecipes(recipeName, recipeCal, recipeImgSrc);
+        displayRecipes(recipeName + '\n' + recipeCal + " calories" + '\n' + recipeImgSrc);
         retrieveRecipeUrl(recipeID);
     }
 };
@@ -85,6 +99,6 @@ var displayRecipes = function(recipeName, recipeCal, recipeImgSrc){
 };
 
 getPokeInfo(pokemonName);
-getRecipe(minCal, maxCal);
+
 
 
