@@ -7,8 +7,14 @@
   body{
     background: #f2f2f2;
     font-family: play;
+    background-size: 100%;
   }
   
+  .continer {
+    display: block;
+    margin-left: 625px;
+    margin-top: 410px;
+  }
 
   .Psearch {
     width: 100%;
@@ -59,3 +65,8 @@
 .searchBtn:focus{
     color: var(--second-color);
   }
+
+  input[type="text"]::placeholder {                    
+    text-align: center; 
+}
+
