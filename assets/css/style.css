@@ -5,6 +5,7 @@
     --fourth-color: #f2f2f2;
     --fifth-color: #00B4CC;
     --sixth-color: #ffffff;
+    --seventh-color: #eee4e4;
   }
 
   header nav ul { 
@@ -13,6 +14,7 @@
    list-style-type:none
   }
 
+  
   footer ul { 
     text-decoration: none;
     font-family: play;
@@ -63,7 +65,7 @@
     margin-top: -80px;
   }
 
-.pbox {
+  .pbox {
     position: relative;
     display: flex;
     border: 1px solid var(--second-color);
@@ -124,14 +126,61 @@
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
+
+  .psearch {
+    margin-left: 20%;
+  }
+
+  .fav-Poke{
+    margin-bottom: 2%;
+    padding-left: 25%;
+    display: flex;
+  }
+
+  .poke-img {
+    margin-left: 7%;
+    margin-top: -80px;
+  }
   
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
+  .psearch {
+    display: flex;
+    margin-left: -10%;
+  }
+
+  .fav-Poke{
+    display: flex;
+    margin-left: -30%;
+    font-size: 25px;
+  }
+
+  .poke-img {
+    display: flex;
+    margin-left: -270px;
+    margin-top: -80px;  
+  }
 }
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
+  .psearch {
+    display: flex;
+    margin-left: -50%;
+  }
+
+  .fav-Poke{
+    display: flex;
+    margin-left: -100%;
+    font-size: 25px;
+  }
+
+  .poke-img {
+    display: flex;
+    margin-left: -400px;
+    margin-top: -80px;  
+  }
 
 }
