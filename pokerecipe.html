@@ -8,34 +8,35 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css" />    
-    <title>PokeDinner</title>
+    <link rel="stylesheet" href="./assets/css/pokerecipe.css" />    
+    <title>PokeDinner Recipe Page</title>
 </head>
 <body>
     <header>
            <nav class="navbar navbar-expand-lg navbar-light">
               <ul>
-                 <li><a href="#about">About</a></li>
+                 <li id="left"><a href="#about">About</a></li>
+                 <li id="right" class="psearch form-outline">                   
+                    <label for="form1" class="form-label"></label>
+                    <input type="text" placeholder="PokeDinner Search" name="Psearch" id="form1" class="form-control pbox"/>     
+                    <button type="submit" class="searchBtn"><i class="fa fa-search"></i></button>   
+                 </li>
               </ul>
             </nav>
      </header>
 
-    <div class="continer">
-        <div class = "wrapper">
-            <div class="search-poke"> 
-                    <h2 class="fav-Poke">Find your favorite Poke Recipe</h2>                   
-                <div class="psearch form-outline">
-                    <label for="form1" class="form-label"></label>
-                    <input type="text" placeholder="PokeDinner Search" name="Psearch" id="form1" class="form-control pbox"/>     
-                    <button type="submit" class="searchBtn" onclick="pokePage()"><i class="fa fa-search"></i></button>     
-                </div>  
+     <!-- <div class="col-9 border">
+        <div class="row">
+             <div class="display">
+                <h2 class="name"></h2>
+                <p class="type"></p>
+                <p class="weight"></p>
+                <p class="height"></p>               
             </div>
         </div>
-            <div class="poke-img">
-                <img src="../PokeDinner/assets/images/pokemon.png" alt="pokemon" width="300" height="350"> 
-           </div>
-    </div>
+    </div> -->
 
+    
 
     <footer>
         <ul>
@@ -43,6 +44,6 @@
          </ul>
     </footer>
 
-    <script src="./assets/js/homepage.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
