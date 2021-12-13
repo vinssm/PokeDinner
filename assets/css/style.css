@@ -3,6 +3,8 @@
     --second-color: #6cc8fa;
     --third-color: #3dadb9;
     --fourth-color: #f2f2f2;
+    --fifth-color: #00B4CC;
+    --sixth-color: #ffffff;
   }
 
   header nav ul { 
@@ -14,8 +16,8 @@
   footer ul { 
     text-decoration: none;
     font-family: play;
-   list-style-type: none;
-   text-align: center;
+    list-style-type: none;
+    text-align: center;
   }
   
 
@@ -84,10 +86,10 @@
 .searchBtn {
   width: 40px;
   height: 34px;
-  border: 1px solid #00B4CC;
-  background: #00B4CC;
+  border: 1px solid var(--fifth-color);
+  background: var(--fifth-color);
   text-align: center;
-  color: #fff;
+  color: var(--sixth-color);
   border-radius: 0 5px 5px 0;
   cursor: pointer;
   font-size: 20px;
