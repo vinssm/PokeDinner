@@ -1,4 +1,6 @@
 # Poké-Dinner
+![Poke-Dinner Logo](assets/images/pokedinner-logo.png)
+
 ## Purpose
 A web application that allows user to input the name of a Pokémon, and returns results of dinner recipe ideas to feed said Pokémon based on recommended caloric intake for Pokémon's weight range.
 ## Built With
@@ -8,7 +10,7 @@ A web application that allows user to input the name of a Pokémon, and returns 
 - Spectre CSS
 - jQuery
 - [PokéApi](https://pokeapi.co/)
-- [EDAMAM Recipe Search API](https://developer.edamam.com/edamam-docs-recipe-api)
+- [Spoonacular Recipe Search API](https://spoonacular.com/food-api)
 ## Website
 [URL coming soon](...)
 ![Img coming soon](...) 
