@@ -26,16 +26,39 @@
   }
   
   .continer {
+    min-height: 100vh;
     display: block;
     margin-left: 470px;
     margin-top: 200px;
   }
 
-  .Psearch {
-    width: 100%;
-    position: relative;
-    margin-left: 100px;   
+  .wrapper{
+    max-width: 1280px;
+    margin-left: -200px;
+    background: var(--fourth-color);
+    text-align: center;
+  }
+
+  .search-poke{
+    margin: 2rem 0;
+  }
+
+  .fav-Poke{
+    margin-bottom: 2%;
+    padding-left: 15%;
     display: flex;
+  }
+
+  .psearch {
+    margin: 0 10%;
+    padding-left: 5%;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .poke-img {
+    margin-left: -30px;
+    margin-top: -80px;
   }
 
 .pbox {
@@ -57,20 +80,10 @@
     color: var(--second-color);
   }
 
-.wrap{
-  width: 30%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
 
 .searchBtn {
   width: 40px;
   height: 34px;
-
   border: 1px solid #00B4CC;
   background: #00B4CC;
   text-align: center;
@@ -88,9 +101,28 @@
     text-align: center; 
 }
 
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (min-width: 1200px) {
+  .psearch {
+    margin-left: 20%;
+  }
+
+  .fav-Poke{
+    margin-bottom: 2%;
+    padding-left: 25%;
+    display: flex;
+  }
+
+  .poke-img {
+    margin-left: 7%;
+    margin-top: -80px;
+  }
+}
+
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
-
+  
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
