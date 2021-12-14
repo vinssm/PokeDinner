@@ -1,7 +1,15 @@
-// global variables
-var pokemonName = "gastly";
+// retrieve pokemon name from url
+var getPokemonName = function() {
+    var queryString = document.location.search;
+    var pokemonName = queryString.split("=")[1];
+    if(pokemonName) {
+        getPokeInfo(pokemonName);
+    } else {
+        document.location.replace("./index.html");
+    }
+}
 
-// retrieve pokemon info based on user input
+// retrieve pokemon info 
 var getPokeInfo = function (pokemonName) {
     var apiUrl = "https://pokeapi.co/api/v2/pokemon/" + pokemonName;
 
@@ -98,7 +106,5 @@ var displayRecipes = function(recipeName, recipeCal, recipeImgSrc){
     console.log(recipeName, recipeCal, recipeImgSrc);
 };
 
-getPokeInfo(pokemonName);
-
-
+getPokemonName();
 
