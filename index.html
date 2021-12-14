@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/style.css" />    
     <title>PokeDinner</title>
 </head>
 <body>
     <header>
-           <nav class="navbar navbar-expand-lg navbar-light">
+           <nav>
               <ul>
-                 <li><a href="#about">About</a></li>
+                 <li id="left" class="u-cf"><a href="#about">About</a></li>
               </ul>
             </nav>
      </header>
@@ -23,10 +21,10 @@
     <div class="continer">
         <div class = "wrapper">
             <div class="search-poke"> 
-                    <h2 class="fav-Poke">Find your favorite Poke Recipe</h2>                   
-                <div class="psearch form-outline">
-                    <label for="form1" class="form-label"></label>
-                    <input type="text" placeholder="PokeDinner Search" name="Psearch" id="form1" class="form-control pbox"/>     
+                    <h3 class="fav-Poke">Find your favorite Poke Recipe</h3>                   
+                <div class="psearch ">
+                    <label for="pokeSearch" class="button-primary"></label>
+                    <input type="text" placeholder="PokeDinner Search" name="Psearch" id="pokeSearch" class="button-primary pbox"/>     
                     <button type="submit" class="searchBtn" onclick="pokePage()"><i class="fa fa-search"></i></button>     
                 </div>  
             </div>
@@ -35,7 +33,7 @@
                 <img src="../PokeDinner/assets/images/pokemon.png" alt="pokemon" width="300" height="350"> 
            </div>
     </div>
-
+    
 
     <footer>
         <ul>

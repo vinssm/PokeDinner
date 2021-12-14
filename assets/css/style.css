@@ -13,6 +13,15 @@
     font-family: play;
    list-style-type:none
   }
+  
+
+  #left {
+    position:absolute;
+    /* right: 160px; */
+    top: 24px;
+    margin-left: 40px;
+    float: left;
+  }
 
   
   footer ul { 
@@ -53,6 +62,7 @@
     display: flex;
   }
 
+
   .psearch {
     margin: 0 10%;
     padding-left: 5%;
@@ -87,7 +97,7 @@
 
 .searchBtn {
   width: 40px;
-  height: 34px;
+  height: 37px;
   border: 1px solid var(--fifth-color);
   background: var(--fifth-color);
   text-align: center;
@@ -106,39 +116,80 @@
 }
 
 
-/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
-@media screen and (min-width: 1200px) {
+
+/* MEDIA QUERY FOR LARGER SCREENS */
+@media only screen and (min-width: 1980px) {
+
   .psearch {
-    margin-left: 20%;
+    display: flex;
+    margin-left: -45%;
   }
 
   .fav-Poke{
     margin-bottom: 2%;
-    padding-left: 25%;
+    padding-left: 102%;
     display: flex;
   }
 
   .poke-img {
-    margin-left: 7%;
+    margin-left: -77%;
     margin-top: -80px;
   }
 }
 
-/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
-@media screen and (max-width: 980px) {
 
+/* MEDIA QUERY FOR 1200px */
+@media screen and (min-width: 1200px) {
   .psearch {
-    margin-left: 20%;
+    margin-left: 5%;
   }
 
   .fav-Poke{
     margin-bottom: 2%;
-    padding-left: 25%;
+    padding-left: 12%;
     display: flex;
   }
 
   .poke-img {
-    margin-left: 7%;
+    margin-left: -7%;
+    margin-top: -80px;
+  }
+}
+
+/* MEDIA QUERY FOR 1200px */
+@media screen and (max-width: 1200px) {
+  .psearch {
+    margin-left: 15%;
+  }
+
+  .fav-Poke{
+    margin-bottom: 2%;
+    padding-left: 15%;
+    display: flex;
+  }
+
+  .poke-img {
+    margin-left: -17%;
+    margin-top: -80px;
+  }
+}
+
+
+/* MEDIA QUERY FOR 980px */
+@media screen and (max-width: 980px) {
+
+  .psearch {
+    margin-left: 5%;
+  }
+
+  .fav-Poke{
+    margin-bottom: 2%;
+    padding-left: 3%;
+    display: flex;
+  }
+
+  .poke-img {
+    margin-left: -34%;
     margin-top: -80px;
   }
   
@@ -153,7 +204,7 @@
 
   .fav-Poke{
     display: flex;
-    margin-left: -30%;
+    margin-left: -28%;
     font-size: 25px;
   }
 
@@ -173,13 +224,13 @@
 
   .fav-Poke{
     display: flex;
-    margin-left: -100%;
+    margin-left: -90%;
     font-size: 25px;
   }
 
   .poke-img {
     display: flex;
-    margin-left: -400px;
+    margin-left: -380px;
     margin-top: -80px;  
   }
 

@@ -13,26 +13,34 @@
    list-style-type:none;
   }
 
+  footer ul { 
+    text-decoration: none;
+    font-family: play;
+    list-style-type: none;
+    text-align: center;
+  }
+
   #left {
     position:absolute;
     /* right: 160px; */
-    top: 24px;
+    top: 28px;
+    margin-left: 40px;
     float: left;
   }
 
  #right {
     position:absolute;
     right: 160px;
-    top: 0;
+    top: 24px;
     float: right;
   }
 
   .searchBtn { 
     position:absolute;
-    right: 73px;
-    top: 24px;
+    right: 47px;
+    top: 5px;
     width: 40px;
-    height: 34px;
+    height: 37px;
     border: 1px solid var(--fifth-color);
     background: var(--fifth-color);
     text-align: center;
