@@ -1,4 +1,26 @@
-:root {
+* {
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}
+#about {
+  margin: 20px;
+  float: left;
+}
+#search-form {
+  float: right;
+  display: flex;
+  margin: 20px;
+}
+#pokeSearch {
+ display: inline;
+ height: 44px;
+ margin: 0 10px;
+}
+#searchBtn {
+display: inline;
+margin-left: 10px;
+}
+/* :root {
     --primary-color: #bebebe;
     --second-color: #6cc8fa;
     --third-color: #3dadb9;
@@ -21,9 +43,9 @@
   }
 
   #left {
-    position:absolute;
+    position:absolute; */
     /* right: 160px; */
-    top: 28px;
+    /* top: 28px;
     margin-left: 40px;
     float: left;
   }
@@ -33,9 +55,9 @@
     right: 160px;
     top: 24px;
     float: right;
-  }
+  } */
 
-  .searchBtn { 
+  /* .searchBtn { 
     position:absolute;
     right: 47px;
     top: 5px;
@@ -56,8 +78,8 @@
   
     input[type="text"]::placeholder {                    
       text-align: center; 
-  }
-
+  } */
+/* 
   .pbox {
     position: relative;
     display: flex;
@@ -75,7 +97,7 @@
   
   .pbox:focus{
     color: var(--second-color);
-  }
+  } */
   
 
   footer { 
