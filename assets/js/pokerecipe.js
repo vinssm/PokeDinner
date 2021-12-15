@@ -43,13 +43,22 @@ var pokemonInfo = function (data) {
 var getCalorieRange = function (weight) {
     var minCal = Math.ceil((weight * 2.2 * 15.3 + 679) / 3) - 50;
     var maxCal = Math.ceil((weight * 2.2 * 15.3 + 679) / 3) + 50;
-    console.log(minCal, maxCal);
     getRecipe(minCal, maxCal);
+    // display cal range on page
+    document.querySelector("#min-cal").textContent = minCal + " cal";
+    document.querySelector("#max-cal").textContent = maxCal + " cal";
 };
 
 // display pokemon card based on retrieved pokemon info
 var displayPokemonCard = function (name, type, weight, height, imgSrc) {
-    console.log(name + '\n' + type + '\n' + weight + "lbs" + '\n' + height + "feet" + '\n' + imgSrc);
+    document.querySelector("#pokemon-name").textContent = name.toUpperCase();
+    document.querySelector("#card-title-pName").textContent = name.toUpperCase();
+    document.querySelector("#card-sprite").setAttribute("src", imgSrc);
+    document.querySelector("#card-type").textContent = "TYPE: " + type.toUpperCase();
+    document.querySelector("#card-weight").textContent = "WEIGHT: " + weight + "LBS";
+    document.querySelector("#card-height").textContent = "HEIGHT: " + height + "FT";
+    // display pokemon name again on recipe section <p>
+    document.querySelector("#recipe-pName").textContent = name.toUpperCase();
 };
 
 // get recipe based on calorie range
@@ -98,16 +107,20 @@ var retrieveRecipeUrl = function (recipeID) {
         });
 };
 
-// add recipe urls as href to recipe cards
-var linkToRecipe = function (data) {
-    var recipeUrl = data.spoonacularSourceUrl;
-    console.log(recipeUrl);
-};
-
 // display recipes in a cards
 var displayRecipes = function (recipeName, recipeCal, recipeImgSrc) {
     console.log(recipeName, recipeCal, recipeImgSrc);
 };
+
+// add recipe urls as href to recipe cards, retrieve addtl info
+var linkToRecipe = function (data) {
+    var recipeUrl = data.spoonacularSourceUrl;
+    var recipeSummary = data.summary;
+    var recipeScore = data.healthScore;
+    console.log(recipeUrl);
+};
+
+
 
 getPokemonName();
 

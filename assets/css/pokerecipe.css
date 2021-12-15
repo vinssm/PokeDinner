@@ -2,114 +2,70 @@
   font-family: 'Press Start 2P', cursive;
   text-align: center;
 }
+nav {
+  display: flex;
+  justify-content: space-between;
+}
 #about {
   margin: 20px;
-  float: left;
-}
-#search-form {
-  float: right;
-  display: flex;
-  margin: 20px;
-}
-#pokeSearch {
- display: inline;
- height: 44px;
- margin: 0 10px;
 }
 #searchBtn {
-display: inline;
-margin-left: 10px;
+  margin: 20px;
 }
-/* :root {
-    --primary-color: #bebebe;
-    --second-color: #6cc8fa;
-    --third-color: #3dadb9;
-    --fourth-color: #f2f2f2;
-    --fifth-color: #00B4CC;
-    --sixth-color: #ffffff;
-  }
+main {
+  display: flex;
+  flex-direction: column;
+}
+#pk-logo {
+  width: 50%;
+  margin: 50px auto 15px;
+}
+#pokemon-card {
+  width: 90%;
+  margin: 20px;
+}
+#pokemon-card p {
+  font-size: 20px;
+}
+#pokemon-card img {
+  width: 50%;
+}
+#pokemon-card ul {
+  padding: 10px 20px;
+}
+#pokemon-card ul li {
+  list-style-type: none;
+}
+#recipes {
+  width: 90%;
+  margin: auto;
+}
+#recipes p {
+  width: 90%;
+  margin: 15px auto;
+}
+@media screen and (min-width: 575px) {
 
-  header nav ul { 
-    text-decoration: none;
-    font-family: play;
-   list-style-type:none;
-  }
+}
 
-  footer ul { 
-    text-decoration: none;
-    font-family: play;
-    list-style-type: none;
-    text-align: center;
-  }
+@media screen and (min-width: 768px) {
 
-  #left {
-    position:absolute; */
-    /* right: 160px; */
-    /* top: 28px;
-    margin-left: 40px;
-    float: left;
-  }
+}
 
- #right {
-    position:absolute;
-    right: 160px;
-    top: 24px;
-    float: right;
-  } */
+@media screen and (min-width: 980px) {
 
-  /* .searchBtn { 
-    position:absolute;
-    right: 47px;
-    top: 5px;
-    width: 40px;
-    height: 37px;
-    border: 1px solid var(--fifth-color);
-    background: var(--fifth-color);
-    text-align: center;
-    color: var(--sixth-color);
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 20px;
-  }
-  
-  .searchBtn:focus{
-      color: var(--second-color);
-    }
-  
-    input[type="text"]::placeholder {                    
-      text-align: center; 
-  } */
-/* 
-  .pbox {
-    position: relative;
-    display: flex;
-    border: 1px solid var(--second-color);
-    display: block;
-    padding: 7px 15px;
-    font-size: 16px;
-    color: var(--second-color);
-    width: 50%;
-    height: 36%;
-    margin-bottom: 15px; 
-    border-radius: 10px 0 0 10px;
-    background-color: rgba(255,255,255, 0.75);    
-  }
-  
-  .pbox:focus{
-    color: var(--second-color);
-  } */
-  
+}
 
-  footer { 
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-decoration: none;
-    font-family: play;
-    list-style-type: none;
-    text-align: center;
-  }
+footer { 
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-decoration: none;
+  font-family: play;
+  list-style-type: none;
+  text-align: center;
+}
 
  
   
