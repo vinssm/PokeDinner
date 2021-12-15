@@ -18,10 +18,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="nes-btn" id="about" href="#about">About</a>
-            <form id="search-form" class="nes-field is-inline">
-                <input type="text" placeholder="Search Pokemon" name="Psearch" id="pokeSearch" class="nes-input"/>
-                <button type="button" class="nes-btn is-success" id="searchBtn">Search</button>
-            </form>
+            <a class="nes-btn is-success" href="./index.html" id="searchBtn">New Search!</a>
         </nav>
     </header>
 
@@ -41,21 +38,53 @@
         </dialog>
     </div>
 
-
-    <!-- <div class="col-9 border">
-        <div class="row">
-             <div class="display">
-                <h2 class="name"></h2>
-                <p class="type"></p>
-                <p class="weight"></p>
-                <p class="height"></p>               
+    <main>
+        <img src="./assets/images/pokedinner-logo.PNG" alt="Poke-Dinner-logo" id="pk-logo">
+        <h2>I choose you,
+            <span id="pokemon-name"></span>
+        </h2>
+        <div>
+            <div id="pokemon-card" class="nes-container is-rounded with-title">
+                <p class="title" id="card-title-pName"></p>
+                <img src="" alt="pokemon sprite" id="card-sprite">
+                <ul>
+                    <li id="card-type">type</li>
+                    <li id="card-weight">weight</li>
+                    <li id="card-height">height</li>
+                </ul>
+            </div>
+            <div id="recipes">
+                <p>Based on your Pokémon's weight, the recommended calorie intake per meal is between <span id="min-cal"></span> and
+                    <span id="max-cal"></span>. Here are some recipes <span id="recipe-pName"></span> will love!
+                </p>
+                <div class="recipe">
+                    <p>Recipe title</p>
+                    <div>
+                        <div>
+                            <img src="" alt="">
+                        </div>
+                        <p>Calories:</p>
+                        <p>Health Score:</p>
+                        <p>Summary</p>
+                    </div>
+                </div>
+                <div class="recipe">
+                    <p>Recipe title</p>
+                    <div>
+                        <div>
+                            <img src="" alt="">
+                        </div>
+                        <p>Calories:</p>
+                        <p>Health Score:</p>
+                        <p>Summary</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div> -->
-
+    </main>
 
     <footer>
-            <a href="#"> PokeDinner &copy; Copyright 2021 </a>
+        <a href="#"> PokeDinner &copy; Copyright 2021 </a>
     </footer>
 
     <script src="./assets/js/pokerecipe.js"></script>
