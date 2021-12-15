@@ -1,8 +1,8 @@
 // retrieve pokemon name from url
-var getPokemonName = function() {
+var getPokemonName = function () {
     var queryString = document.location.search;
     var pokemonName = queryString.split("=")[1];
-    if(pokemonName) {
+    if (pokemonName) {
         getPokeInfo(pokemonName);
     } else {
         document.location.replace("./index.html");
@@ -20,7 +20,8 @@ var getPokeInfo = function (pokemonName) {
                     pokemonInfo(data);
                 });
             } else {
-                alert("Error: Pokemon not found");
+                var modal = document.querySelector("#pokemon-error");
+                modal.showModal();
             }
         });
 };
@@ -40,8 +41,8 @@ var pokemonInfo = function (data) {
 
 // get calorie range based on pokemon weight, using customized WHO formula from https://www.thejakartapost.com/life/2016/09/27/how-to-calculate-your-ideal-calorie-intake.html
 var getCalorieRange = function (weight) {
-    var minCal = Math.ceil((weight*2.2*15.3+679)/3)-50;
-    var maxCal = Math.ceil((weight*2.2*15.3+679)/3)+50;
+    var minCal = Math.ceil((weight * 2.2 * 15.3 + 679) / 3) - 50;
+    var maxCal = Math.ceil((weight * 2.2 * 15.3 + 679) / 3) + 50;
     console.log(minCal, maxCal);
     getRecipe(minCal, maxCal);
 };
@@ -62,7 +63,8 @@ var getRecipe = function (minCal, maxCal) {
                     recipeInfo(data);
                 });
             } else {
-                alert("Error: Recipes not found");
+                // var modal = document.querySelector("#recipe-error");
+                // modal.showModal();
             }
         });
 };
@@ -80,7 +82,7 @@ var recipeInfo = function (recipes) {
 };
 
 // retrieve recipe url based on recipe ID
-var retrieveRecipeUrl = function(recipeID) {
+var retrieveRecipeUrl = function (recipeID) {
     var apiUrl = "https://api.spoonacular.com/recipes/" + recipeID + "/information?apiKey=40e808b51d7a4c93a511c37332820d56";
 
     fetch(apiUrl)
@@ -90,19 +92,20 @@ var retrieveRecipeUrl = function(recipeID) {
                     linkToRecipe(data);
                 });
             } else {
-                alert("Error: Recipe URL not found");
+                // var modal = document.querySelector("#recipe-error");
+                // modal.showModal();
             }
         });
 };
 
 // add recipe urls as href to recipe cards
-var linkToRecipe = function(data) {
+var linkToRecipe = function (data) {
     var recipeUrl = data.spoonacularSourceUrl;
     console.log(recipeUrl);
 };
 
 // display recipes in a cards
-var displayRecipes = function(recipeName, recipeCal, recipeImgSrc){
+var displayRecipes = function (recipeName, recipeCal, recipeImgSrc) {
     console.log(recipeName, recipeCal, recipeImgSrc);
 };
 

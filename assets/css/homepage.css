@@ -1,237 +1,118 @@
-:root {
-    --primary-color: #bebebe;
-    --second-color: #6cc8fa;
-    --third-color: #3dadb9;
-    --fourth-color: #f2f2f2;
-    --fifth-color: #00B4CC;
-    --sixth-color: #ffffff;
-    --seventh-color: #eee4e4;
-  }
-
-  header nav ul { 
-    text-decoration: none;
-    font-family: play;
-   list-style-type:none
-  }
-  
-
-  #left {
-    position:absolute;
-    /* right: 160px; */
-    top: 24px;
-    margin-left: 40px;
-    float: left;
-  }
-
-  
-  footer ul { 
-    text-decoration: none;
-    font-family: play;
-    list-style-type: none;
-    text-align: center;
-  }
-  
-
-  body{
-    background: var(--fourth-color);
-    font-family: play;
-    background-size: 100%;
-  }
-  
-  .continer {
-    min-height: 100vh;
-    display: block;
-    margin-left: 470px;
-    margin-top: 200px;
-  }
-
-  .wrapper{
-    max-width: 1280px;
-    margin-left: -200px;
-    background: var(--fourth-color);
-    text-align: center;
-  }
-
-  .search-poke{
-    margin: 2rem 0;
-  }
-
-  .fav-Poke{
-    margin-bottom: 2%;
-    padding-left: 15%;
-    display: flex;
-  }
-
-
-  .psearch {
-    margin: 0 10%;
-    padding-left: 5%;
-    display: flex;
-    align-items: stretch;
-  }
-
-  .poke-img {
-    margin-left: -30px;
-    margin-top: -80px;
-  }
-
-  .pbox {
-    position: relative;
-    display: flex;
-    border: 1px solid var(--second-color);
-    display: block;
-    padding: 7px 15px;
-    font-size: 16px;
-    color: var(--second-color);
-    width: 50%;
-    height: 36%;
-    margin-bottom: 15px; 
-    border-radius: 10px 0 0 10px;
-    background-color: rgba(255,255,255, 0.75);    
-  }
-  
-  .pbox:focus{
-    color: var(--second-color);
-  }
-
-
-.searchBtn {
-  width: 40px;
-  height: 37px;
-  border: 1px solid var(--fifth-color);
-  background: var(--fifth-color);
+* {
+  font-family: 'Press Start 2P', cursive;
   text-align: center;
-  color: var(--sixth-color);
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  font-size: 20px;
+}
+body {
+  display: flex;
+  flex-direction: column;
 }
 
-.searchBtn:focus{
-    color: var(--second-color);
-  }
-
-  input[type="text"]::placeholder {                    
-    text-align: center; 
+#about {
+  margin: 20px;
+  float: left;
 }
 
-
-
-/* MEDIA QUERY FOR LARGER SCREENS */
-@media only screen and (min-width: 1980px) {
-
-  .psearch {
-    display: flex;
-    margin-left: -45%;
-  }
-
-  .fav-Poke{
-    margin-bottom: 2%;
-    padding-left: 102%;
-    display: flex;
-  }
-
-  .poke-img {
-    margin-left: -77%;
-    margin-top: -80px;
-  }
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#pk-logo {
+  width: 95%;
+  margin: 50px auto 15px;
+}
+.search-poke {
+  text-align: center;
+}
+.search-poke h3 {
+  font-size: 15px;
+  margin: 50px 20px;
+}
+.search-poke div {
+  display: flex;
+  justify-content: center;
+}
+#pokeSearch {
+  margin: 15px auto;
+  width: 90%;
+}
+#searchBtn {
+  margin: 15px auto;
+  width: 90%;
+}
+.poke-icon {
+  margin: 35px auto 5px;
+}
+footer {
+  margin-top: 100px;
+  font-size: 12px;
 }
 
-
-/* MEDIA QUERY FOR 1200px */
-@media screen and (min-width: 1200px) {
-  .psearch {
-    margin-left: 5%;
+@media screen and (min-width: 575px) {
+  #pk-logo {
+    width: 95%;
+    margin: 20px auto 15px;
   }
-
-  .fav-Poke{
-    margin-bottom: 2%;
-    padding-left: 12%;
-    display: flex;
+  .search-poke {
+    width: 90%;
   }
-
-  .poke-img {
-    margin-left: -7%;
-    margin-top: -80px;
+  .search-poke h3 {
+    font-size: 20px;
   }
-}
-
-/* MEDIA QUERY FOR 1200px */
-@media screen and (max-width: 1200px) {
-  .psearch {
-    margin-left: 15%;
+  #pokeSearch {
+    width: 70%;
+    display: inline;
+    height: 44px;
   }
-
-  .fav-Poke{
-    margin-bottom: 2%;
-    padding-left: 15%;
-    display: flex;
-  }
-
-  .poke-img {
-    margin-left: -17%;
-    margin-top: -80px;
-  }
-}
-
-
-/* MEDIA QUERY FOR 980px */
-@media screen and (max-width: 980px) {
-
-  .psearch {
-    margin-left: 5%;
-  }
-
-  .fav-Poke{
-    margin-bottom: 2%;
-    padding-left: 3%;
-    display: flex;
-  }
-
-  .poke-img {
-    margin-left: -34%;
-    margin-top: -80px;
-  }
-  
-}
-
-/* MEDIA QUERY FOR TABLETS AND SMALLER */
-@media screen and (max-width: 768px) {
-  .psearch {
-    display: flex;
-    margin-left: -10%;
-  }
-
-  .fav-Poke{
-    display: flex;
-    margin-left: -28%;
-    font-size: 25px;
-  }
-
-  .poke-img {
-    display: flex;
-    margin-left: -270px;
-    margin-top: -80px;  
+  #searchBtn {
+    width: 25%;
+    display: inline;
+    position: relative;
+    bottom: 1px;
   }
 }
 
-/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
-@media screen and (max-width: 575px) {
-  .psearch {
-    display: flex;
-    margin-left: -50%;
+@media screen and (min-width: 768px) {
+  .search-poke {
+    width: 80%;
   }
-
-  .fav-Poke{
-    display: flex;
-    margin-left: -90%;
-    font-size: 25px;
+  #pk-logo {
+    width: 75%;
+    margin-top: 20px;
   }
-
-  .poke-img {
-    display: flex;
-    margin-left: -380px;
-    margin-top: -80px;  
+  #pokeSearch {
+    width: 70%;
+    display: inline;
+    height: 44px;
+    margin: 0 10px;
   }
+  #searchBtn {
+    width: 25%;
+    display: inline;
+    margin: 0 10px;
+    position: relative;
+    bottom: 0.5px;
+  }
+}
 
+@media screen and (min-width: 980px) {
+  .search-poke {
+    width: 60%;
+  }
+  #pk-logo {
+    width: 50%;
+    margin-top: 40px;
+  }
+  #pokeSearch {
+    width: 70%;
+    display: inline;
+    height: 44.5px;
+  }
+  #searchBtn {
+    width: 25%;
+    display: inline;
+    position: relative;
+    top: 0.3px;
+  }
 }
