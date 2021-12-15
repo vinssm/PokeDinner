@@ -7,7 +7,7 @@ A web application that allows user to input the name of a Pokémon, and returns 
 - HTML
 - CSS
 - JavaScript
-- Spectre CSS
+- Skeleton CSS
 - jQuery
 - [PokéApi](https://pokeapi.co/)
 - [Spoonacular Recipe Search API](https://spoonacular.com/food-api)
