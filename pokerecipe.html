@@ -16,42 +16,18 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="nes-btn" id="about" href="#about">About</a>
-            <form id="search-form" class="nes-field is-inline">
-                <input type="text" placeholder="Search Pokemon" name="Psearch" id="pokeSearch" class="nes-input"/>
-                <button type="button" class="nes-btn is-success" id="searchBtn">Search</button>
-            </form>
-        </nav>
-    </header>
 
-    <div>
-        <dialog class="nes-dialog" id="pokemon-error">
-            <h5>Error!</h5>
-            <p>Please enter a Pokémon name!</p>
-            <a class="nes-btn" href="./index.html"> OK!</a>
-        </dialog>
-    </div>
-
-    <div>
-        <dialog class="nes-dialog" id="recipe-error">
-            <h5>Error!</h5>
-            <p>Recipe not found. Try again!</p>
-            <a class="nes-btn" href="./index.html"> OK!</a>
-        </dialog>
-    </div>
-
-
-    <!-- <div class="col-9 border">
-        <div class="row">
-             <div class="display">
-                <h2 class="name"></h2>
-                <p class="type"></p>
-                <p class="weight"></p>
-                <p class="height"></p>               
-            </div>
-        </div>
-    </div> -->
+           <nav class="navbar navbar-expand-lg navbar-light">
+              <ul>
+                 <li id="left"><a href="about.html">About</a></li>
+                 <li id="right" class="psearch form-outline">                   
+                    <label for="form1" class="form-label"></label>
+                    <input type="text" placeholder="PokeDinner Search" name="Psearch" id="form1" class="form-control pbox"/>     
+                    <button type="submit" class="searchBtn"><i class="fa fa-search"></i></button>   
+                 </li>
+              </ul>
+            </nav>
+     </header>
 
 
     <footer>
@@ -59,6 +35,5 @@
     </footer>
 
     <script src="./assets/js/pokerecipe.js"></script>
-</body>
-
+   </body>
 </html>
