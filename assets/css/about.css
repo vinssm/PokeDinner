@@ -1,0 +1,119 @@
+:root {
+    --primary-color: #bebebe;
+    --second-color: #6cc8fa;
+    --third-color: #3dadb9;
+    --fourth-color: #f2f2f2;
+    --fifth-color: #00B4CC;
+    --sixth-color: #ffffff;
+  }
+
+  header nav ul { 
+      display: flex;
+      justify-content:space-between;
+      text-decoration: none;
+      font-family: play;
+     list-style-type:none;
+  }
+
+  header nav ul li {
+    display: flex;
+    justify-content:space-between;
+  }
+
+  footer ul { 
+    text-decoration: none;
+    font-family: play;
+    list-style-type: none;
+    text-align: center;
+  }
+
+  #left {
+    position:absolute;
+    /* right: 160px; */
+    top: 28px;
+    margin-left: 40px;
+    float: left;
+  }
+
+  #leftAbout {
+    position:absolute;
+    /* right: 160px; */
+    top: 28px;
+    margin-left: 100px;
+    float: left;
+  }
+
+ #right {
+    position:absolute;
+    right: 160px;
+    top: 24px;
+    float: right;
+  }
+
+  .searchBtn { 
+    position:absolute;
+    right: 47px;
+    top: 5px;
+    width: 40px;
+    height: 37px;
+    border: 1px solid var(--fifth-color);
+    background: var(--fifth-color);
+    text-align: center;
+    color: var(--sixth-color);
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .searchBtn:focus{
+      color: var(--second-color);
+    }
+  
+    input[type="text"]::placeholder {                    
+      text-align: center; 
+  }
+
+  .pbox {
+    position: relative;
+    display: flex;
+    border: 1px solid var(--second-color);
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: var(--second-color);
+    width: 50%;
+    height: 36%;
+    margin-bottom: 15px; 
+    border-radius: 10px 0 0 10px;
+    background-color: rgba(255,255,255, 0.75);    
+  }
+  
+  .pbox:focus{
+    color: var(--second-color);
+  }
+  
+
+  footer { 
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-decoration: none;
+    font-family: play;
+    list-style-type: none;
+    text-align: center;
+    height: 2em;
+  }
+
+ 
+  .about{
+      text-align: center;
+      margin-top: 100px;
+      font-family: play;
+      font-size: 20px;
+      margin-bottom: 50px;
+  }
+
+  h5 {
+     font-weight: bold; 
+  }
