@@ -10,20 +10,17 @@ var getPokemonName = function () {
 }
 
 // retrieve pokemon info 
-var getPokeInfo = function (pokemonName) {
-    var apiUrl = "https://pokeapi.co/api/v2/pokemon/" + pokemonName;
+var getPokeInfo = async function (pokemonName) {
+  var apiUrl = "https://pokeapi.co/api/v2/pokemon/" + pokemonName;
 
-    fetch(apiUrl)
-        .then(function (response) {
-            if (response.ok) {
-                response.json().then(function (data) {
-                    pokemonInfo(data);
-                });
-            } else {
-                var modal = document.querySelector("#pokemon-error");
-                modal.showModal();
-            }
-        });
+  const response = await fetch(apiUrl)
+  if (response.ok) {
+      const data = await response.json()
+      pokemonInfo(data);
+  } else {
+      var modal = document.querySelector("#pokemon-error");
+      modal.showModal();
+  }
 };
 
 // retrieve and convert pokemon info into standard units, pass it unto getCalorieRange() and displayPokemonCard()
@@ -62,20 +59,17 @@ var displayPokemonCard = function (name, type, weight, height, imgSrc) {
 };
 
 // get recipe based on calorie range
-var getRecipe = function (minCal, maxCal) {
-    var apiUrl = "https://api.spoonacular.com/recipes/findByNutrients?apiKey=40e808b51d7a4c93a511c37332820d56&minCalories=" + minCal + "&maxCalories=" + maxCal + "&number=2&random=true";
+var getRecipe = async function (minCal, maxCal) {
+  var apiUrl = "https://api.spoonacular.com/recipes/findByNutrients?apiKey=40e808b51d7a4c93a511c37332820d56&minCalories=" + minCal + "&maxCalories=" + maxCal + "&number=2&random=true";
 
-    fetch(apiUrl)
-        .then(function (response) {
-            if (response.ok) {
-                response.json().then(function (data) {
-                    recipeInfo(data);
-                });
-            } else {
-                var modal = document.querySelector("#recipe-error");
-                modal.showModal();
-            }
-        });
+  const response = await fetch(apiUrl)
+  if (response.ok) {
+      const data = await response.json()
+      recipeInfo(data);
+  } else {
+      var modal = document.querySelector("#recipe-error");
+      modal.showModal();
+  }
 };
 
 // retrieve recipe info and pass unto displayRecipes(), retrieve recipe ID and pass unto retrieveUrl()
@@ -94,37 +88,31 @@ var recipeInfo = function (recipes) {
 };
 
 // retrieve recipe url based on recipe ID 1
-var retrieveRecipeUrl1 = function (recipeID1) {
+var retrieveRecipeUrl1 = async function (recipeID1) {
     var apiUrl1 = "https://api.spoonacular.com/recipes/" + recipeID1 + "/information?apiKey=40e808b51d7a4c93a511c37332820d56";
 
-    fetch(apiUrl1)
-        .then(function (response) {
-            if (response.ok) {
-                response.json().then(function (data) {
-                    linkToRecipe1(data);
-                });
-            } else {
-                var modal = document.querySelector("#recipe-error");
-                modal.showModal();
-            }
-        });
+    const response = await fetch(apiUrl1)
+    if (response.ok) {
+        const data = await response.json()
+            linkToRecipe1(data);
+    } else {
+        var modal = document.querySelector("#recipe-error");
+        modal.showModal();
+    }
 };
 
 // retrieve recipe url based on recipe ID 1
-var retrieveRecipeUrl2 = function (recipeID2) {
+var retrieveRecipeUrl2 = async function (recipeID2) {
     var apiUrl2 = "https://api.spoonacular.com/recipes/" + recipeID2 + "/information?apiKey=40e808b51d7a4c93a511c37332820d56";
 
-    fetch(apiUrl2)
-        .then(function (response) {
-            if (response.ok) {
-                response.json().then(function (data) {
-                    linkToRecipe2(data);
-                });
-            } else {
-                var modal = document.querySelector("#recipe-error");
-                modal.showModal();
-            }
-        });
+    const response = await fetch(apiUrl2)
+    if (response.ok) {
+      const data = await response.json()
+      linkToRecipe2(data);
+    } else {
+        var modal = document.querySelector("#recipe-error");
+        modal.showModal();
+    }
 };
 
 // display recipes in a cards
