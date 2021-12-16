@@ -43,40 +43,51 @@
         <h2>I choose you,
             <span id="pokemon-name"></span>
         </h2>
-        <div>
+        <div id="main-content">
             <div id="pokemon-card" class="nes-container is-rounded with-title">
-                <p class="title" id="card-title-pName"></p>
+                <p class="title" id="card-title-pName">Name</p>
                 <img src="" alt="pokemon sprite" id="card-sprite">
                 <ul>
-                    <li id="card-type">type</li>
-                    <li id="card-weight">weight</li>
-                    <li id="card-height">height</li>
+                    <li id="card-type"></li>
+                    <li id="card-weight"></li>
+                    <li id="card-height"></li>
                 </ul>
             </div>
             <div id="recipes">
-                <p>Based on your Pokémon's weight, the recommended calorie intake per meal is between <span id="min-cal"></span> and
+                <p>Based on your Pokémon's weight, the recommended calorie intake per meal is between <span
+                        id="min-cal"></span> and
                     <span id="max-cal"></span>. Here are some recipes <span id="recipe-pName"></span> will love!
                 </p>
-                <div class="recipe">
-                    <p>Recipe title</p>
-                    <div>
-                        <div>
-                            <img src="" alt="">
+                <div id="recipe-container">
+                    <div class="nes-container is-dark" id="recipe-1">
+                        <p id="recipe-name-1"></p>
+                        <div class="recipe-info">
+                            <div class="recipe-photo">
+                                <a href="" id="recipe-url-1" target="_blank">
+                                    <img src="" alt="recipe photo" id="recipe-img-1">
+                                </a>
+                            </div>
+                            <div class="recipe-details">
+                                <p id="recipe-cal-1"></p>
+                                <p id="recipe-hScore-1"></p>
+                                <p id="recipe-time-1"></p>
+                            </div>
                         </div>
-                        <p>Calories:</p>
-                        <p>Health Score:</p>
-                        <p>Summary</p>
                     </div>
-                </div>
-                <div class="recipe">
-                    <p>Recipe title</p>
-                    <div>
-                        <div>
-                            <img src="" alt="">
+                    <div class="nes-container is-dark" id="recipe-2">
+                        <p id="recipe-name-2"></p>
+                        <div class="recipe-info">
+                            <div class="recipe-photo">
+                                <a href="" id="recipe-url-2" target="_blank">
+                                    <img src="" alt="recipe photo" id="recipe-img-2">
+                                </a>
+                            </div>
+                            <div class="recipe-details">
+                                <p id="recipe-cal-2"></p>
+                                <p id="recipe-hScore-2"></p>
+                                <p id="recipe-time-2"></p>
+                            </div>
                         </div>
-                        <p>Calories:</p>
-                        <p>Health Score:</p>
-                        <p>Summary</p>
                     </div>
                 </div>
             </div>
@@ -88,5 +99,6 @@
     </footer>
 
     <script src="./assets/js/pokerecipe.js"></script>
-   </body>
+</body>
+
 </html>
