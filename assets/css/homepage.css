@@ -33,6 +33,13 @@ body {
   display: flex;
   justify-content: center;
 }
+
+#previous-searches {
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto; 
+}
+
 #pokeSearch {
   margin: 15px auto;
   width: 90%;
@@ -44,8 +51,12 @@ body {
 .poke-icon {
   margin: 35px auto 5px;
 }
+
+#poke-icons {
+  display: flex;
+}
 footer { 
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -53,6 +64,7 @@ footer {
   font-family: play;
   list-style-type: none;
   text-align: center;
+  height: 2em;
 }
 
 @media screen and (min-width: 575px) {
