@@ -1,0 +1,136 @@
+* {
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#about {
+  margin: 20px;
+  float: left;
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#pk-logo {
+  width: 95%;
+  margin: 50px auto 15px;
+}
+.search-poke {
+  text-align: center;
+}
+.search-poke h3 {
+  font-size: 15px;
+  margin: 50px 20px;
+}
+.search-poke div {
+  display: flex;
+  justify-content: center;
+}
+
+#previous-searches {
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto; 
+}
+
+#pokeSearch {
+  margin: 15px auto;
+  width: 90%;
+}
+#searchBtn {
+  margin: 15px auto;
+  width: 90%;
+}
+.poke-icon {
+  margin: 35px auto 5px;
+}
+
+#poke-icons {
+  display: flex;
+}
+footer { 
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-decoration: none;
+  font-family: play;
+  list-style-type: none;
+  text-align: center;
+  height: 2em;
+}
+
+@media screen and (min-width: 575px) {
+  #pk-logo {
+    width: 95%;
+    margin: 20px auto 15px;
+  }
+  .search-poke {
+    width: 90%;
+  }
+  .search-poke h3 {
+    font-size: 20px;
+  }
+  #pokeSearch {
+    width: 70%;
+    display: inline;
+    height: 44px;
+  }
+  #searchBtn {
+    width: 25%;
+    display: inline;
+    position: relative;
+    bottom: 1px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .search-poke {
+    width: 80%;
+  }
+  #pk-logo {
+    width: 75%;
+    margin-top: 20px;
+  }
+  #pokeSearch {
+    width: 70%;
+    display: inline;
+    height: 44px;
+    margin: 0 10px;
+  }
+  #searchBtn {
+    width: 25%;
+    display: inline;
+    margin: 0 10px;
+    position: relative;
+    bottom: 0.5px;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .search-poke {
+    width: 60%;
+  }
+  #pk-logo {
+    width: 50%;
+    margin-top: 40px;
+  }
+  #pokeSearch {
+    width: 70%;
+    display: inline;
+    height: 44.5px;
+  }
+  #searchBtn {
+    width: 25%;
+    display: inline;
+    position: relative;
+    top: 0.3px;
+  }
+}

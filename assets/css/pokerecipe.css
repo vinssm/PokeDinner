@@ -1,0 +1,199 @@
+* {
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+#about {
+  margin: 20px;
+}
+#searchBtn {
+  margin: 20px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+#pk-logo {
+  width: 50%;
+  margin: 50px auto 15px;
+}
+#pokemon-card {
+  width: 90%;
+  margin: 20px auto;
+}
+#pokemon-card p {
+  font-size: 20px;
+}
+#pokemon-card img {
+  width: 50%;
+}
+#pokemon-card ul {
+  padding: 10px 20px;
+}
+#pokemon-card ul li {
+  list-style-type: none;
+}
+#recipes {
+  width: 100%;
+}
+#recipes p {
+  width: 90%;
+  margin: 30px auto;
+}
+#recipe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#recipe-1, #recipe-2 {
+  margin-bottom: 25px;
+  width: 90%;
+}
+#recipe-img-1, #recipe-img-2 {
+  width: 90%;
+}
+
+footer { 
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-decoration: none;
+  font-family: play;
+  list-style-type: none;
+  text-align: center;
+  height: 2em;
+}
+
+/* screen >= 575 */
+@media screen and (min-width: 575px) {
+  #pk-logo {
+    width: 45%;
+  }
+  #pokemon-card {
+    width: 75%;
+    margin: 20px auto;
+  }
+  #pokemon-card img {
+    width: 65%;
+  }
+  #recipes p {
+    width: 85%;
+  }
+  #recipe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #recipe-1, #recipe-2 {
+    margin-bottom: 25px;
+    width: 75%;
+  }
+  #recipe-img-1, #recipe-img-2 {
+    width: 80%;
+  }
+}
+
+/* screen <= 768 */
+@media screen and (min-width: 768px) {
+  #pk-logo {
+    width: 30%;
+  }
+  #pokemon-card {
+    width: 50%;
+  }
+  #pokemon-card p {
+    font-size: 20px;
+  }
+  #pokemon-card img {
+    width: 70%;
+  }
+  #recipes p {
+    width: 80%;
+    margin: 30px auto;
+  }
+  #recipe-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+  }
+  #recipe-1, #recipe-2 {
+    width: 45%;
+  }
+  .recipe-details p {
+    margin: 12px auto;
+  }
+  #recipe-img-1, #recipe-img-2 {
+    margin: 10px auto;
+  }
+}
+.nes-container.is-rounded {
+  border-image-repeat: repeat;
+}
+/* screen >= 980 */
+@media screen and (min-width: 980px) {
+  #main-content {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  #pokemon-card {
+    width: 30%;
+    margin: 0px auto;
+  }
+  #pokemon-card p {
+    font-size: 20px;
+  }
+  #pokemon-card img {
+    width: 90%;
+    margin: 50px auto;
+  }
+  #pokemon-card ul {
+    padding: 10px 20px;
+  }
+  #pokemon-card ul li {
+    list-style-type: none;
+    margin: 20px auto;
+  }
+  #recipes {
+    width: 65%;
+  }
+  #recipes p {
+    width: 100%;
+    margin: 10px auto;
+  }
+  #recipe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #recipe-1, #recipe-2 {
+    padding: 10px 25px;
+    margin-bottom: 10px;
+    width: 95%;
+  }
+  .recipe-info {
+    display: flex;
+  }
+  .recipe-photo {
+    width: 30%;
+  }
+  .recipe-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0px auto;
+  }
+  #recipe-img-1, #recipe-img-2 {
+    width: 90%;
+    margin: 10px 15px;
+  }
+}
+
+
+ 
+  

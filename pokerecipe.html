@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/pokerecipe.css" />
+    <title>PokeDinner Recipe Page</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="nes-btn" id="about" href="about.html">About</a>
+            <a class="nes-btn is-success" href="./index.html" id="searchBtn">New Search!</a>
+        </nav>
+    </header>
+
+    <div>
+        <dialog class="nes-dialog" id="pokemon-error">
+            <h5>Error!</h5>
+            <p>Please enter a Pokémon name!</p>
+            <a class="nes-btn" href="./index.html"> OK!</a>
+        </dialog>
+    </div>
+
+    <div>
+        <dialog class="nes-dialog" id="recipe-error">
+            <h5>Error!</h5>
+            <p>Recipe not found. Try again!</p>
+            <a class="nes-btn" href="./index.html"> OK!</a>
+        </dialog>
+    </div>
+
+    <main>
+        <img src="./assets/images/pokedinner-logo.PNG" alt="Poke-Dinner-logo" id="pk-logo">
+        <h2>I choose you,
+            <span id="pokemon-name"></span>
+        </h2>
+        <div id="main-content">
+            <div id="pokemon-card" class="nes-container is-rounded with-title">
+                <p class="title" id="card-title-pName">Name</p>
+                <img src="" alt="pokemon sprite" id="card-sprite">
+                <ul>
+                    <li id="card-type"></li>
+                    <li id="card-weight"></li>
+                    <li id="card-height"></li>
+                </ul>
+            </div>
+            <div id="recipes">
+                <p>Based on your Pokémon's weight, the recommended calorie intake per meal is between <span
+                        id="min-cal"></span> and
+                    <span id="max-cal"></span>. Here are some recipes <span id="recipe-pName"></span> will love!
+                </p>
+                <div id="recipe-container">
+                    <div class="nes-container is-dark" id="recipe-1">
+                        <p id="recipe-name-1"></p>
+                        <div class="recipe-info">
+                            <div class="recipe-photo">
+                                <a href="" id="recipe-url-1" target="_blank">
+                                    <img src="" alt="recipe photo" id="recipe-img-1">
+                                </a>
+                            </div>
+                            <div class="recipe-details">
+                                <p id="recipe-cal-1"></p>
+                                <p id="recipe-hScore-1"></p>
+                                <p id="recipe-time-1"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nes-container is-dark" id="recipe-2">
+                        <p id="recipe-name-2"></p>
+                        <div class="recipe-info">
+                            <div class="recipe-photo">
+                                <a href="" id="recipe-url-2" target="_blank">
+                                    <img src="" alt="recipe photo" id="recipe-img-2">
+                                </a>
+                            </div>
+                            <div class="recipe-details">
+                                <p id="recipe-cal-2"></p>
+                                <p id="recipe-hScore-2"></p>
+                                <p id="recipe-time-2"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="#"> PokeDinner &copy; Copyright 2021 </a>
+    </footer>
+
+    <script src="./assets/js/pokerecipe.js"></script>
+</body>
+
+</html>
