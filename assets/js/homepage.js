@@ -6,7 +6,7 @@ function pokePage(pokemonSearch) {
 function saveSearch() {
   // if nothing in search-history then set searchHist to empty array
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
-  const searchHist = JSON.parse(localStorage.getItem('search-history'));
+  const searchHist = JSON.parse(localStorage.getItem('search-history')) ?? [];
   var searchTerm = document.querySelector("#pokeSearch").value
   .trim()
   // remove spaces and "." eg "Mr. Mime"
