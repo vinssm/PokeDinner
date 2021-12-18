@@ -6,12 +6,10 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 #about {
   margin: 20px;
   float: left;
 }
-
 .container {
   text-align: center;
   display: flex;
@@ -33,27 +31,31 @@ body {
   display: flex;
   justify-content: center;
 }
-
+.nes-balloon {
+  margin-left: 25px;
+}
 #previous-searches {
   display: flex;
   flex-direction: column;
   margin: 30px auto; 
 }
-
 #pokeSearch {
   margin: 15px auto;
   width: 90%;
+}
+#past-searches li:hover {
+  color: blue;
 }
 #searchBtn {
   margin: 15px auto;
   width: 90%;
 }
 .poke-icon {
-  margin: 35px auto 5px;
+  margin: 10px auto 5px;
 }
-
 #poke-icons {
   display: flex;
+  margin: 20px;
 }
 footer { 
   position: relative;
