@@ -1,3 +1,5 @@
+var lastSearchEl = document.querySelector("#last-search");
+
 // retrieve search term from input form, pass it unto URL for secondary page
 function pokePage(pokemonSearch) {
   location.href = "pokerecipe.html?pokemon=" + pokemonSearch;
@@ -14,21 +16,25 @@ function saveSearch() {
   .replaceAll(' ', '-')
   .toLowerCase();
   
+  // if search term not in searchHist array push search term to localStorage 
   if(!searchHist.includes(searchTerm)){
     searchHist.push(searchTerm)
     localStorage.setItem('search-history', JSON.stringify(searchHist));
   }
-  
-  console.log(searchHist);
   pokePage(searchTerm);
 };
+
 
 // Load last search term to balloon from localStorage if it exists
 function loadSearch() {
   const searchHist = JSON.parse(localStorage.getItem('search-history'));
+
   if (searchHist) {
-    console.log(searchHist)
+    let lastSearchTerm = searchHist[searchHist.length -1];
+    lastSearchEl.textContent = lastSearchTerm + " enjoyed the food!";
   } else {
-    console.log("nothing in searchHist");
+    lastSearchEl.textContent = "I'm Hungry!";
   }
-}
+};
+
+loadSearch();
